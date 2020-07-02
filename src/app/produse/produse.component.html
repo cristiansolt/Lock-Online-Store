@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <img src="assets/wrapper3.jpg" class="img-responsive" alt="product_wrapper" style="width:100%;">
+  <p class="h4 centered"><i class="shadow-sm fa fa-th-large" aria-hidden="true"></i> PRODUSE<br><span><small><a style="text-decoration: none;" class="text-white" routerLink="/acasa"><i class="fa fa-home" aria-hidden="true"></i> </a></small><small> / Produse</small></span>
+</div>
+
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="container dropdown mb-4">
+        <div [routerLink]="['/produse',category.nume]" routerLinkActive="text-white bg-danger"
+          style="text-transform: capitalize;" *ngFor="let category of categories"
+          class="shadow list-group-item dropdown-toggle d-block" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          {{category.nume}}
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <ul class="list-group list-group-flush">
+            <li style="text-transform: capitalize;" type="button" *ngFor="let subcategory of subcategories"
+              [routerLink]="['/produse',selected_category]" [queryParams]="{subcat : subcategory.nume }"
+              class="list-group-item dropdown-item">{{subcategory.nume}}</li>
+          </ul>
+        </div>
+      </div>
+      <!-- <ul class="list-group list-group-flush float-right">
+                <li [routerLink]="['/produse',category.nume]" *ngFor="let category of categories" class="d-flex justify-content-end list-group-item"><a routerLinkActive="text-danger font-weight-bold" class="paddd" style="text-transform: capitalize;">{{ category.nume }}</a></li>
+              </ul> -->
+    </div>
+    <!-- <div class="row"> -->
+    <!-- <ul class="bordura list-group list-group-flush">
+                <li *ngFor="let subcategory of subcategories" [routerLink]="['/produse',selected_category]" [queryParams]="{subcat : subcategory.nume }" class="list-group-item"><a routerLinkActive="text-danger font-weight-bold" style="text-transform: capitalize;">{{ subcategory.nume }}</a></li>
+            </ul> -->
+    <!-- </div> -->
+    <div class="col-md-9">
+      <div class="row">
+        <div *ngFor="let product of products_display" class="col-md-4 col-lg-3 col-sm-6">
+            <figure class="card card-product">
+              <div class="img-wrap"><img class="img-responsive" src="{{product.imagePath}}"></div>
+              <figcaption class="info-wrap">
+                <h4 class="title">{{ product.name }}</h4>
+                <p class="desc">{{ product.description }}</p>
+                <div class="rating-wrap">
+                  <div class="label-rating"><i class="fa fa-circle {{product.color}}" aria-hidden="true"></i>
+                    {{ product.stoc}}</div>
+                  <div class="label-rating"></div>
+                </div>
+              </figcaption>
+              <div class="bottom-wrap">
+                <a href="/comanda" class="btn btn-sm btn-danger float-right">Comanda</a>
+                <div class="price-wrap h5">
+                  <span class="price-new">{{ product.price }} Lei</span> <del class="price-old"></del>
+                </div> <!-- price-wrap.// -->
+              </div> <!-- bottom-wrap.// -->
+            </figure>
+        </div> <!-- col // -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+

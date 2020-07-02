@@ -1,0 +1,29 @@
+.carousel-item{
+  position: relative;
+  text-align: center;
+}
+.centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 30pt;
+  letter-spacing: 1.5px;
+}
+small a{
+  color: white;
+  text-decoration: none;
+  font-size: 10pt;
+  padding: 1em;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+small a:hover{
+  background-color: lightgoldenrodyellow;
+  transition: 0.4s;
+  color: darkred;
+}
+
+

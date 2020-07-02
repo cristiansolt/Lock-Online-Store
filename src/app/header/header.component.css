@@ -1,0 +1,28 @@
+.navbar > a.navbar-brand{
+    color: #EB1F25;
+    font-weight: bold;
+    font-size: xx-large;
+    border: none;
+    transition: 0.3s;
+}
+.navbar > a.navbar-brand:hover{
+    color: darkred;
+}
+.navbar{
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    background-color: white;
+}
+.navbar ul > li > a{
+    font-size: 17px;
+    transition: 0.4s;
+}
+.navbar ul > li.nav-item > a.nav-link:hover{
+    color: #EB1F25;
+}
+img{
+    width: 100%;
+}
+.navbar ul > li.nav-item > a.active{
+    color: #EB1F25;
+}

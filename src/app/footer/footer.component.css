@@ -1,0 +1,11 @@
+footer{
+    border-top: 1px solid #d3d3d3;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+.uneditable-input:focus {   
+  border-color: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 2px darkred;
+  outline: 0 none;
+}
